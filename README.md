@@ -43,7 +43,7 @@ everything is in postfix notation. Also, everything is stack based.
 
     (1 2 3 4)
         stack = [[1, 2, 3, 4]]
-    car
+    first
         stack = [1]
     4
         stack = [1, 4]
