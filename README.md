@@ -72,4 +72,4 @@ notice the difference between functions and values. Functions are just lists tha
 
 theoretically, there is no need for lambdas because functions have no arguments. So, in a theoretical situation, a map function would look like:
 
-    (1 2 3 4) (3 +) map
+    (1 2 3 4) (3 +) map ; -> (4 5 6 7)
