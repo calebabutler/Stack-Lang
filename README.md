@@ -53,7 +53,7 @@ everything is in postfix notation. Also, everything is stack based.
         5
         stack = []
     
-    (1 2 3 4) car 4 + print ; same code, written on one line
+    (1 2 3 4) first 4 + print ; same code, written on one line
 
 even functions are defined in a stack based way:
 
