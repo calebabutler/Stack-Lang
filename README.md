@@ -61,7 +61,7 @@ even functions are defined in a stack based way:
 
     5 factorial print ; -> 120
 
-notice the difference between functions and values. Functions are just lists that are ran in compile time. This can easily be rewritten as:
+notice the difference between functions and values. Functions are just lists that are ran at run time. This can easily be rewritten as:
 
 
     'factorial (dup 0 = (pop 1) (dup 1 - factorial *) if) def
