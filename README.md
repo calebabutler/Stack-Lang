@@ -22,10 +22,10 @@ Here are the built-in functions.
     >           ; finds if two numbers are greater than, adds 't' or 'f'
 
     type        ; gives type of the top of the stack, 'list', 'number' or 'symbol'
-    first       ; first item of list/string
-    rest        ; rest of a list/string
+    first       ; first item of list/symbol
+    rest        ; rest of a list/symbol
     pair        ; pairing two lists, same as cons in lisp
-    concat      ; pairs two strings or lists of any type
+    concat      ; pairs two symbols or lists of any type
     print       ; prints top of stack
     
     if          ; gets third value off stack, if 't' executes 2nd stack list, if 'f' executes top stack list
