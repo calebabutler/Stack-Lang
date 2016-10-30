@@ -25,7 +25,7 @@ Here are the built-in functions.
     first       ; first item of list/string
     rest        ; rest of a list/string
     pair        ; pairing two lists, same as cons in lisp
-    concat      ; pairs two strings of any type
+    concat      ; pairs two strings or lists of any type
     print       ; prints top of stack
     
     if          ; gets third value off stack, if 't' executes 2nd stack list, if 'f' executes top stack list
