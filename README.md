@@ -35,11 +35,11 @@ Here are the built-in functions.
     defun       ; takes in a symbol (quoted with '), and a list executed on runtime.
     popfun      ; pops the last function definition off of the functions stack
 
-if your command isn't a primitive, it will either run a predefined function/value or it will be added to the stack as a symbol/number. Lists are written like this:
+If your command isn't a primitive, it will either run a predefined function/value or it will be added to the stack as a symbol/number. Lists are written like this:
 
     (1 2 3 4)
 
-everything is in postfix notation. Also, everything is stack based.
+Everything is in postfix notation. Also, everything is stack based.
 
     (1 2 3 4)
         stack = [[1, 2, 3, 4]]
@@ -55,21 +55,24 @@ everything is in postfix notation. Also, everything is stack based.
     
     (1 2 3 4) first 4 + print ; same code, written on one line
 
-even functions are defined in a stack based way:
+Even functions are defined in a stack based way:
 
     'factorial (dup 0 = (pop 1) (dup 1 - factorial *) if) defun
 
     5 factorial print ; -> 120
 
-notice the difference between functions and values. Functions are just lists that are ran at run time. This can easily be rewritten as:
+Notice the difference between functions and values. Functions are just lists that are ran at run time. This can easily be rewritten as:
 
 
     'factorial (dup 0 = (pop 1) (dup 1 - factorial *) if) def
     
-    5 factorial ! print ; -> also 120
+    5 factorial ! print ; -> 120
     
-    factorial print ; -> (dup 0 = (pop 1) (dup 1 - factorial *) if) not error
+    factorial print ; -> (dup 0 = (pop 1) (dup 1 - factorial *) if)
 
-theoretically, there is no need for lambdas because functions have no arguments. So, in a theoretical situation, a map function would look like:
+Theoretically, there is no need for lambdas because functions have pre-defined arguments (due to this being a stack-oriented programming language). So, for example, a possible map function would have two lists as arguments, like this:
 
     (1 2 3 4) (3 +) map ; -> (4 5 6 7)
+
+
+This repository has been archived. I created it in high school. I archived this repository because this project had many interesting ideas which I enjoy quite a bit. I know now that other programming languages have done similar things; for example, picolisp implements functions as either integers (for core functions) or lists. They use 'quote' instead of 'lambda'.
